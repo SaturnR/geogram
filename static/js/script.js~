@@ -1,0 +1,18 @@
+function fetchdata(){
+    text = $("#text_editor").value;
+    console.log(text);
+    $.ajax({
+	type : 'POST',
+	url : "/post",//"{{url_for('post')}}",
+	contentType: 'application/json;charset=UTF-8',
+	data : {'data':text},
+	success: function(response){
+	    // Perform operation on the return value
+	    console.log(response);
+	}
+ });
+}
+
+$(document).ready(function(){
+ setInterval(fetchdata,1000);
+});
