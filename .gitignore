@@ -1,0 +1,9 @@
+# python files
+.env
+__pycache__
+
+# Emacs temp files
+*~
+
+# Temoporary and backup files
+tmp
